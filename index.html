@@ -1,0 +1,37 @@
+// 主函數：呼叫頂部與底部繪製函數
+function tree(n) {
+    printTreeTop(n);
+    printTreeBottom(n);
+}
+
+// 繪製聖誕樹葉子的部分
+function printTreeTop(n) {
+    for (let i = 1; i <= n; i++) {
+        // 計算空格：每一層需要的空格為總層數減去當前層數
+        let spaces = repeatchar(n - i, ' ');
+        // 計算星星：星星數量公式為 (2 * 當前層數) - 1
+        let stars = repeatchar(2 * i - 1, '*');
+        console.log(spaces + stars);
+    }
+}
+
+// 繪製聖誕樹樹幹的部分
+function printTreeBottom(n) {
+    // 根據範例，樹幹通常固定為兩層，且位於中央
+    for (let i = 0; i < 2; i++) {
+        let spaces = repeatchar(n - 1, ' ');
+        console.log(spaces + "*");
+    }
+}
+
+// 輔助函數：重複字元
+function repeatchar(count, arg_char) {
+    let result = "";
+    for (let i = 0; i < count; i++) {
+        result += arg_char;
+    }
+    return result;
+}
+
+// 執行範例，例如畫出一顆層數為 4 的樹
+tree(4);
