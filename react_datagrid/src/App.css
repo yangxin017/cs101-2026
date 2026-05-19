@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #18c99a;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-shell {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.toolbar {
+  margin-bottom: 28px;
+}
+
+.toolbar .MuiButton-root {
+  min-width: 120px;
+  border-color: #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.toolbar .MuiButton-contained {
+  background: #ffffff;
+  color: #159b78;
+}
+
+.toolbar .MuiButton-contained:hover {
+  background: #f2f8f6;
+}
+
+.table-header {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.table-header h1 {
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+}
+
+.error-message {
+  margin-bottom: 16px;
+}
+
+.grid-wrapper {
+  height: 650px;
+  width: 100%;
+  background: #ffffff;
+}
+
+.grid-wrapper .MuiDataGrid-root {
+  border: 0;
+}
